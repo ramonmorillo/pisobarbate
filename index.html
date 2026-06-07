@@ -14,6 +14,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="alternate" hreflang="es" href="?lang=es">
+  <link rel="alternate" hreflang="en" href="?lang=en">
+  <link rel="alternate" hreflang="de" href="?lang=de">
+  <link rel="alternate" hreflang="fr" href="?lang=fr">
   <link rel="stylesheet" href="styles.css">
   <script type="application/ld+json">
   {
@@ -42,6 +46,12 @@
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="navLinks">
         <span class="sr-only">Abrir menú</span><span></span><span></span><span></span>
       </button>
+      <div class="language-switcher" aria-label="Selector de idioma">
+        <button type="button" data-lang="es" aria-pressed="true">ES</button>
+        <button type="button" data-lang="en" aria-pressed="false">EN</button>
+        <button type="button" data-lang="de" aria-pressed="false">DE</button>
+        <button type="button" data-lang="fr" aria-pressed="false">FR</button>
+      </div>
       <div class="nav-links" id="navLinks">
         <a href="#hoy">Qué hacer hoy</a>
         <a href="#sin-coche">Sin coche</a>
