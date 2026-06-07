@@ -1,6 +1,15 @@
 // Guía Vistas Marinas Barbate. Edita las estructuras de datos de esta zona para personalizar la guía.
 const PLACEHOLDER_MAPS = "PEGAR_AQUI_ENLACE_GOOGLE_MAPS";
 
+const TOURISM_URLS = {
+  vejer: "https://turismovejer.es/",
+  barbate: "https://www.turismobarbate.es/",
+  conil: "https://turismoconil.com/",
+  tarifa: "https://turismodetarifa.com/",
+  cadiz: "https://www.cadizturismo.com/es",
+  medinaSidonia: "https://www.turismomedinasidonia.es/"
+};
+
 const apartmentInfo = {
   name: "Vistas Marinas Barbate",
   guideName: "Guía Vistas Marinas Barbate",
@@ -96,15 +105,15 @@ const routes = [
 ];
 
 const escapes = [
-  {name:"Vejer de la Frontera", see:"Calles blancas, miradores, patios, tiendas bonitas y buen ambiente gastronómico.", ideal:"Tarde sin playa o día con viento", time:"Medio día", best:"Tarde", plan:"Paseo por casco histórico, mirador y cena.", mapsUrl:PLACEHOLDER_MAPS},
-  {name:"Zahara de los Atunes", see:"Playa amplia, restaurantes y ambiente de verano.", ideal:"Combinar tarde junto al mar después de comer en Barbate", time:"Medio día", best:"Tarde", plan:"Comida en una referencia de Barbate y paseo por la playa de Zahara.", mapsUrl:PLACEHOLDER_MAPS},
-  {name:"Caños de Meca", see:"Ambiente bohemio, calas y Faro de Trafalgar.", ideal:"Atardecer especial", time:"Tarde", best:"Últimas horas de luz", plan:"Calas, faro y puesta de sol.", mapsUrl:PLACEHOLDER_MAPS},
-  {name:"Conil", see:"Pueblo marinero, playa y ambiente", ideal:"Paseo y comida informal", time:"Medio día", best:"Mañana o tarde", plan:"Casco urbano, playa y tapas.", mapsUrl:PLACEHOLDER_MAPS},
-  {name:"Tarifa", see:"Casco histórico, ambiente viajero y playas abiertas", ideal:"Día diferente", time:"Día completo", best:"Día con ganas de moverse", plan:"Paseo, comida y playa si el viento acompaña.", mapsUrl:PLACEHOLDER_MAPS},
-  {name:"Bolonia", see:"Playa salvaje, duna, paisaje atlántico y ruinas romanas de Baelo Claudia.", ideal:"Excursión memorable", time:"Mañana larga o día", best:"Mañana", plan:"Ruinas, duna, playa y comida sencilla.", mapsUrl:PLACEHOLDER_MAPS},
-  {name:"Cádiz", see:"Centro histórico, mar, cultura y tapas", ideal:"Plan urbano con historia", time:"Día completo", best:"Día con viento", plan:"Paseo por centro, mercado y atardecer urbano.", mapsUrl:PLACEHOLDER_MAPS},
-  {name:"Medina Sidonia", see:"Historia, vistas y dulces", ideal:"Ruta interior tranquila", time:"Medio día", best:"Mañana", plan:"Casco histórico, miradores y merienda.", mapsUrl:PLACEHOLDER_MAPS},
-  {name:"El Palmar", see:"Playa abierta, surf y ambiente relajado", ideal:"Puesta de sol y paseo", time:"Tarde", best:"Atardecer", plan:"Paseo largo y cena informal.", mapsUrl:PLACEHOLDER_MAPS}
+  {name:"Vejer de la Frontera", see:"Calles blancas, miradores, patios, tiendas bonitas y buen ambiente gastronómico.", ideal:"Tarde sin playa o día con viento", time:"Medio día", best:"Tarde", plan:"Paseo por casco histórico, mirador y cena.", mapsUrl:TOURISM_URLS.vejer},
+  {name:"Zahara de los Atunes", see:"Playa amplia, restaurantes y ambiente de verano.", ideal:"Combinar tarde junto al mar después de comer en Barbate", time:"Medio día", best:"Tarde", plan:"Comida en una referencia de Barbate y paseo por la playa de Zahara.", mapsUrl:TOURISM_URLS.barbate},
+  {name:"Caños de Meca", see:"Ambiente bohemio, calas y Faro de Trafalgar.", ideal:"Atardecer especial", time:"Tarde", best:"Últimas horas de luz", plan:"Calas, faro y puesta de sol.", mapsUrl:TOURISM_URLS.barbate},
+  {name:"Conil", see:"Pueblo marinero, playa y ambiente", ideal:"Paseo y comida informal", time:"Medio día", best:"Mañana o tarde", plan:"Casco urbano, playa y tapas.", mapsUrl:TOURISM_URLS.conil},
+  {name:"Tarifa", see:"Casco histórico, ambiente viajero y playas abiertas", ideal:"Día diferente", time:"Día completo", best:"Día con ganas de moverse", plan:"Paseo, comida y playa si el viento acompaña.", mapsUrl:TOURISM_URLS.tarifa},
+  {name:"Bolonia", see:"Playa salvaje, duna, paisaje atlántico y ruinas romanas de Baelo Claudia.", ideal:"Excursión memorable", time:"Mañana larga o día", best:"Mañana", plan:"Ruinas, duna, playa y comida sencilla.", mapsUrl:TOURISM_URLS.tarifa},
+  {name:"Cádiz", see:"Centro histórico, mar, cultura y tapas", ideal:"Plan urbano con historia", time:"Día completo", best:"Día con viento", plan:"Paseo por centro, mercado y atardecer urbano.", mapsUrl:TOURISM_URLS.cadiz},
+  {name:"Medina Sidonia", see:"Historia, vistas y dulces", ideal:"Ruta interior tranquila", time:"Medio día", best:"Mañana", plan:"Casco histórico, miradores y merienda.", mapsUrl:TOURISM_URLS.medinaSidonia},
+  {name:"El Palmar", see:"Playa abierta, surf y ambiente relajado", ideal:"Puesta de sol y paseo", time:"Tarde", best:"Atardecer", plan:"Paseo largo y cena informal.", mapsUrl:TOURISM_URLS.vejer}
 ];
 
 const specialPlans = ["Atardecer en Trafalgar", "Cena especial en Zahara", "Mañana en Bolonia", "Tarde en Vejer", "Ruta de La Breña", "Día en Cádiz", "Compra de productos locales para cenar en la terraza", "Desayuno lento junto al mar", "Día familiar sin coche", "Ruta gastronómica del atún rojo"];
@@ -164,7 +173,7 @@ const ui = {
     heroImage: "Terraza imaginada frente al mar en Barbate", brandSmall: "Barbate junto al mar",
     favoriteAria: name => `Guardar ${name} en favoritos`, maps: "Abrir en Google Maps", call: "Llamar/reservar", callShort: "Llamar", openMap: "Abrir mapa", copyAddress: "Copiar dirección",
     placeholderCopied: "Placeholder copiado para editar", addressCopied: "Dirección copiada", copyError: "No se pudo copiar automáticamente",
-    all: "todos", localTip: "Tip local", why: "Por qué funciona", contactEditable: "Contacto editable", backTop: "Volver arriba",
+    all: "todos", localTip: "Tip local", why: "Por qué funciona", contactEditable: "Contacto editable", backTop: "Volver arriba", tourismWeb: "Web turística",
     specialTerrace: "Un plan muy conectado con la terraza y el ritmo del alojamiento.", specialDefault: "Completa horarios, reservas o enlaces si quieres convertirlo en una recomendación cerrada.",
     labels: {type:"Tipo", distance:"Distancia", idealFor:"Ideal para", bestTime:"Mejor momento", recommendation:"Recomendación", occupancy:"Ocupación", kids:"Niños", wind:"Viento", whatToOrder:"Qué pedir", duration:"Duración", difficulty:"Dificultad", bestHour:"Mejor hora", see:"Qué ver", recommendedTime:"Tiempo recomendado", suggestedPlan:"Plan sugerido", contact:"Contacto", address:"Dirección"}
   },
@@ -175,7 +184,7 @@ const ui = {
     heroImage: "Imagined terrace overlooking the sea in Barbate", brandSmall: "Barbate by the sea",
     favoriteAria: name => `Save ${name} to favorites`, maps: "Open in Google Maps", call: "Call/book", callShort: "Call", openMap: "Open map", copyAddress: "Copy address",
     placeholderCopied: "Placeholder copied for editing", addressCopied: "Address copied", copyError: "Could not copy automatically",
-    all: "all", localTip: "Local tip", why: "Why it works", contactEditable: "Editable contact", backTop: "Back to top",
+    all: "all", localTip: "Local tip", why: "Why it works", contactEditable: "Editable contact", backTop: "Back to top", tourismWeb: "Tourism website",
     specialTerrace: "A plan closely connected with the terrace and the rhythm of the apartment.", specialDefault: "Add times, bookings or links if you want to turn it into a finished recommendation.",
     labels: {type:"Type", distance:"Distance", idealFor:"Best for", bestTime:"Best time", recommendation:"Recommendation", occupancy:"Crowds", kids:"Children", wind:"Wind", whatToOrder:"What to order", duration:"Duration", difficulty:"Difficulty", bestHour:"Best time", see:"What to see", recommendedTime:"Recommended time", suggestedPlan:"Suggested plan", contact:"Contact", address:"Address"}
   },
@@ -186,7 +195,7 @@ const ui = {
     heroImage: "Gedachte Terrasse mit Meerblick in Barbate", brandSmall: "Barbate am Meer",
     favoriteAria: name => `${name} als Favorit speichern`, maps: "In Google Maps öffnen", call: "Anrufen/reservieren", callShort: "Anrufen", openMap: "Karte öffnen", copyAddress: "Adresse kopieren",
     placeholderCopied: "Platzhalter zum Bearbeiten kopiert", addressCopied: "Adresse kopiert", copyError: "Automatisches Kopieren nicht möglich",
-    all: "alle", localTip: "Lokaler Tipp", why: "Warum es passt", contactEditable: "Bearbeitbarer Kontakt", backTop: "Nach oben",
+    all: "alle", localTip: "Lokaler Tipp", why: "Warum es passt", contactEditable: "Bearbeitbarer Kontakt", backTop: "Nach oben", tourismWeb: "Tourismus-Website",
     specialTerrace: "Ein Plan, der sehr gut zur Terrasse und zum Rhythmus der Unterkunft passt.", specialDefault: "Ergänze Zeiten, Reservierungen oder Links, wenn daraus eine fertige Empfehlung werden soll.",
     labels: {type:"Art", distance:"Entfernung", idealFor:"Ideal für", bestTime:"Beste Zeit", recommendation:"Empfehlung", occupancy:"Auslastung", kids:"Kinder", wind:"Wind", whatToOrder:"Was bestellen", duration:"Dauer", difficulty:"Schwierigkeit", bestHour:"Beste Uhrzeit", see:"Was sehen", recommendedTime:"Empfohlene Zeit", suggestedPlan:"Planvorschlag", contact:"Kontakt", address:"Adresse"}
   },
@@ -197,7 +206,7 @@ const ui = {
     heroImage: "Terrasse imaginée face à la mer à Barbate", brandSmall: "Barbate au bord de la mer",
     favoriteAria: name => `Enregistrer ${name} dans les favoris`, maps: "Ouvrir dans Google Maps", call: "Appeler/réserver", callShort: "Appeler", openMap: "Ouvrir la carte", copyAddress: "Copier l’adresse",
     placeholderCopied: "Placeholder copié pour modification", addressCopied: "Adresse copiée", copyError: "Copie automatique impossible",
-    all: "tous", localTip: "Conseil local", why: "Pourquoi ça marche", contactEditable: "Contact modifiable", backTop: "Retour en haut",
+    all: "tous", localTip: "Conseil local", why: "Pourquoi ça marche", contactEditable: "Contact modifiable", backTop: "Retour en haut", tourismWeb: "Site touristique",
     specialTerrace: "Un plan très lié à la terrasse et au rythme du logement.", specialDefault: "Ajoutez horaires, réservations ou liens pour en faire une recommandation complète.",
     labels: {type:"Type", distance:"Distance", idealFor:"Idéal pour", bestTime:"Meilleur moment", recommendation:"Recommandation", occupancy:"Fréquentation", kids:"Enfants", wind:"Vent", whatToOrder:"Que commander", duration:"Durée", difficulty:"Difficulté", bestHour:"Meilleure heure", see:"À voir", recommendedTime:"Temps conseillé", suggestedPlan:"Plan suggéré", contact:"Contact", address:"Adresse"}
   }
@@ -376,7 +385,7 @@ function renderCards() {
   $("#beachesGrid").innerHTML = beaches.map(beach => `<article class="card"><h3>${t(beach.name)}</h3>${tagsHtml(beach.tags)}<p><strong>${l("type")}:</strong> ${t(beach.type)}</p><p><strong>${l("distance")}:</strong> ${t(beach.distance)}</p><p><strong>${l("idealFor")}:</strong> ${t(beach.idealFor)}</p><p><strong>${l("bestTime")}:</strong> ${t(beach.bestTime)}</p><p><strong>${l("recommendation")}:</strong> ${t(beach.hostTip)}</p><p><strong>${l("occupancy")}:</strong> ${t(beach.occupancy)} · <strong>${l("kids")}:</strong> ${t(beach.kids)} · <strong>${l("wind")}:</strong> ${t(beach.wind)}</p><div class="card-actions">${mapButton(beach.mapsUrl)}${favoriteButton("playa", beach.name)}</div></article>`).join("");
   $("#restaurantsGrid").innerHTML = restaurants.map((rest, index) => `<article class="card restaurant-card"><span class="restaurant-number">${String(index + 1).padStart(2, "0")}</span><h3>${t(rest.name)}</h3>${tagsHtml([rest.category, rest.price])}<p><strong>${l("idealFor")}:</strong> ${t(rest.idealFor)}</p><p><strong>${l("whatToOrder")}:</strong> ${t(rest.whatToOrder)}</p><p><strong>${u("why")}:</strong> ${t(rest.why)}</p><p><strong>${l("distance")}:</strong> ${t(rest.distance)}</p><div class="card-actions"><a class="btn primary ${isPlaceholder(rest.bookingUrl) ? "placeholder-link" : ""}" href="${placeholderHref(rest.bookingUrl)}" target="_blank" rel="noopener">${t("Web/reservar")}</a>${mapButton(rest.mapsUrl)}${favoriteButton("restaurante", rest.name)}</div></article>`).join("");
   $("#routesGrid").innerHTML = routes.map(route => `<article class="card"><h3>${t(route.name)}</h3><p><strong>${l("duration")}:</strong> ${t(route.duration)}</p><p><strong>${l("difficulty")}:</strong> ${t(route.difficulty)}</p><p><strong>${l("bestHour")}:</strong> ${t(route.bestTime)}</p><p><strong>${l("idealFor")}:</strong> ${t(route.idealFor)}</p><p><strong>${l("recommendation")}:</strong> ${t(route.recommendation)}</p><div class="card-actions">${mapButton(route.mapsUrl, "Maps/Wikiloc")}${favoriteButton("ruta", route.name)}</div></article>`).join("");
-  $("#escapesGrid").innerHTML = escapes.map(escape => `<article class="card"><h3>${t(escape.name)}</h3><p><strong>${l("see")}:</strong> ${t(escape.see)}</p><p><strong>${l("idealFor")}:</strong> ${t(escape.ideal)}</p><p><strong>${l("recommendedTime")}:</strong> ${t(escape.time)}</p><p><strong>${l("bestTime")}:</strong> ${t(escape.best)}</p><p><strong>${l("suggestedPlan")}:</strong> ${t(escape.plan)}</p><div class="card-actions">${mapButton(escape.mapsUrl)}${favoriteButton("escapada", escape.name)}</div></article>`).join("");
+  $("#escapesGrid").innerHTML = escapes.map(escape => `<article class="card"><h3>${t(escape.name)}</h3><p><strong>${l("see")}:</strong> ${t(escape.see)}</p><p><strong>${l("idealFor")}:</strong> ${t(escape.ideal)}</p><p><strong>${l("recommendedTime")}:</strong> ${t(escape.time)}</p><p><strong>${l("bestTime")}:</strong> ${t(escape.best)}</p><p><strong>${l("suggestedPlan")}:</strong> ${t(escape.plan)}</p><div class="card-actions">${mapButton(escape.mapsUrl, u("tourismWeb"))}${favoriteButton("escapada", escape.name)}</div></article>`).join("");
   $("#servicesGrid").innerHTML = services.map(service => `<a class="map-button ${isPlaceholder(service.mapsUrl) ? "placeholder-link" : ""}" href="${placeholderHref(service.mapsUrl)}" target="_blank" rel="noopener"><span>${t(service.name)}</span><span>↗</span></a>`).join("");
   $("#emergencyGrid").innerHTML = emergencyServices.map(service => `<article class="card"><h3>${t(service.name)}</h3><p><strong>${l("contact")}:</strong> ${t(service.detail)}</p><p><strong>${l("address")}:</strong> ${t(service.address)}</p><div class="card-actions">${mapButton(service.mapsUrl, service.mapsUrl.startsWith("tel:") ? u("callShort") : u("openMap"))}${copyButton(service.address)}</div></article>`).join("");
 }
