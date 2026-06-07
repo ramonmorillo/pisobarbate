@@ -138,13 +138,15 @@ const services = [
 ];
 
 const emergencyServices = [
-  {name:"Emergencias", detail:"112", address:"Llamada directa ante urgencia médica o emergencia", mapsUrl:"tel:112"},
-  {name:"Centro de salud", detail:"PENDIENTE_DE_COMPLETAR", address:"PENDIENTE_DE_COMPLETAR", mapsUrl:PLACEHOLDER_MAPS},
-  {name:"Farmacias cercanas", detail:"PENDIENTE_DE_COMPLETAR", address:"PENDIENTE_DE_COMPLETAR", mapsUrl:PLACEHOLDER_MAPS},
-  {name:"Policía local", detail:"PENDIENTE_DE_COMPLETAR", address:"PENDIENTE_DE_COMPLETAR", mapsUrl:PLACEHOLDER_MAPS},
-  {name:"Guardia Civil", detail:"PENDIENTE_DE_COMPLETAR", address:"PENDIENTE_DE_COMPLETAR", mapsUrl:PLACEHOLDER_MAPS},
-  {name:"Taxi", detail:"PENDIENTE_DE_COMPLETAR", address:"PENDIENTE_DE_COMPLETAR", mapsUrl:PLACEHOLDER_MAPS},
-  {name:"Hospital de referencia", detail:"PENDIENTE_DE_COMPLETAR", address:"PENDIENTE_DE_COMPLETAR", mapsUrl:PLACEHOLDER_MAPS},
+  {name:"Emergencias generales", detail:"112", address:"Llamada directa ante urgencia médica o emergencia", mapsUrl:"tel:112"},
+  {name:"Guardia Civil (Barbate)", detail:"956 430 011", address:"Puesto P. de Barbate de Franco · Av. de Andalucía, 53", mapsUrl:"tel:956430011"},
+  {name:"Policía Local", detail:"092 / 956 433 800", address:"Teléfonos de interés de Turismo de Barbate", mapsUrl:"tel:092"},
+  {name:"Bomberos y Protección Civil", detail:"956 063 607 / 956 063 606", address:"Teléfonos de interés Barbate", mapsUrl:"tel:956063607"},
+  {name:"Urgencias médicas", detail:"956 012 007", address:"Centro de Salud Barbate", mapsUrl:"tel:956012007"},
+  {name:"Centro de Salud", detail:"600 147 539", address:"Av. de la Mar, s/n", mapsUrl:"tel:600147539"},
+  {name:"Salud Responde (cita previa)", detail:"955 545 060", address:"Servicio de cita previa sanitaria", mapsUrl:"tel:955545060"},
+  {name:"Ayuntamiento de Barbate", detail:"956 063 600 (ext. 1000-1003)", address:"Av. del Mar, 58", mapsUrl:"tel:956063600"},
+  {name:"Oficina de Turismo", detail:"956 063 613", address:"Paseo Marítimo, 5", mapsUrl:"tel:956063613"},
   {name:"Sereno/anfitrión", detail:"PENDIENTE_DE_COMPLETAR", address:"Contacto editable", mapsUrl:"#"}
 ];
 
