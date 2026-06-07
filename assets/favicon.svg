@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Guía Vistas Marinas Barbate">
+  <rect width="64" height="64" rx="16" fill="#0E3A53"/>
+  <path d="M10 40c8-8 14 8 22 0s14 8 22 0" fill="none" stroke="#4FA3C7" stroke-width="5" stroke-linecap="round"/>
+  <path d="M16 26c7-9 18-12 32-8-8 2-14 7-18 15" fill="none" stroke="#E8D8B8" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="48" cy="17" r="5" fill="#D87C5A"/>
+</svg>
