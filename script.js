@@ -16,7 +16,6 @@ const apartmentInfo = {
   howToArrive: "PENDIENTE_DE_COMPLETAR",
   parking: "PENDIENTE_DE_COMPLETAR",
   hostContact: "PENDIENTE_DE_COMPLETAR",
-  whatsappUrl: "PENDIENTE_DE_COMPLETAR",
   windUrl: "PEGAR_AQUI_ENLACE_WINDY_AEMET_O_WINDGURU",
   managedBy: "Sereno, alojamientos en Costa de la Luz"
 };
@@ -166,7 +165,7 @@ const ui = {
     heroImage: "Terraza imaginada frente al mar en Barbate", brandSmall: "Barbate junto al mar",
     favoriteAria: name => `Guardar ${name} en favoritos`, maps: "Abrir en Google Maps", call: "Llamar/reservar", callShort: "Llamar", openMap: "Abrir mapa", copyAddress: "Copiar dirección",
     placeholderCopied: "Placeholder copiado para editar", addressCopied: "Dirección copiada", copyError: "No se pudo copiar automáticamente",
-    all: "todos", localTip: "Tip local", why: "Por qué funciona", contactEditable: "Contacto editable", whatsApp: "Contactar por WhatsApp", backTop: "Volver arriba",
+    all: "todos", localTip: "Tip local", why: "Por qué funciona", contactEditable: "Contacto editable", backTop: "Volver arriba",
     specialTerrace: "Un plan muy conectado con la terraza y el ritmo del alojamiento.", specialDefault: "Completa horarios, reservas o enlaces si quieres convertirlo en una recomendación cerrada.",
     labels: {type:"Tipo", distance:"Distancia", idealFor:"Ideal para", bestTime:"Mejor momento", recommendation:"Recomendación", occupancy:"Ocupación", kids:"Niños", wind:"Viento", whatToOrder:"Qué pedir", duration:"Duración", difficulty:"Dificultad", bestHour:"Mejor hora", see:"Qué ver", recommendedTime:"Tiempo recomendado", suggestedPlan:"Plan sugerido", contact:"Contacto", address:"Dirección"}
   },
@@ -177,7 +176,7 @@ const ui = {
     heroImage: "Imagined terrace overlooking the sea in Barbate", brandSmall: "Barbate by the sea",
     favoriteAria: name => `Save ${name} to favorites`, maps: "Open in Google Maps", call: "Call/book", callShort: "Call", openMap: "Open map", copyAddress: "Copy address",
     placeholderCopied: "Placeholder copied for editing", addressCopied: "Address copied", copyError: "Could not copy automatically",
-    all: "all", localTip: "Local tip", why: "Why it works", contactEditable: "Editable contact", whatsApp: "Contact via WhatsApp", backTop: "Back to top",
+    all: "all", localTip: "Local tip", why: "Why it works", contactEditable: "Editable contact", backTop: "Back to top",
     specialTerrace: "A plan closely connected with the terrace and the rhythm of the apartment.", specialDefault: "Add times, bookings or links if you want to turn it into a finished recommendation.",
     labels: {type:"Type", distance:"Distance", idealFor:"Best for", bestTime:"Best time", recommendation:"Recommendation", occupancy:"Crowds", kids:"Children", wind:"Wind", whatToOrder:"What to order", duration:"Duration", difficulty:"Difficulty", bestHour:"Best time", see:"What to see", recommendedTime:"Recommended time", suggestedPlan:"Suggested plan", contact:"Contact", address:"Address"}
   },
@@ -188,7 +187,7 @@ const ui = {
     heroImage: "Gedachte Terrasse mit Meerblick in Barbate", brandSmall: "Barbate am Meer",
     favoriteAria: name => `${name} als Favorit speichern`, maps: "In Google Maps öffnen", call: "Anrufen/reservieren", callShort: "Anrufen", openMap: "Karte öffnen", copyAddress: "Adresse kopieren",
     placeholderCopied: "Platzhalter zum Bearbeiten kopiert", addressCopied: "Adresse kopiert", copyError: "Automatisches Kopieren nicht möglich",
-    all: "alle", localTip: "Lokaler Tipp", why: "Warum es passt", contactEditable: "Bearbeitbarer Kontakt", whatsApp: "Per WhatsApp kontaktieren", backTop: "Nach oben",
+    all: "alle", localTip: "Lokaler Tipp", why: "Warum es passt", contactEditable: "Bearbeitbarer Kontakt", backTop: "Nach oben",
     specialTerrace: "Ein Plan, der sehr gut zur Terrasse und zum Rhythmus der Unterkunft passt.", specialDefault: "Ergänze Zeiten, Reservierungen oder Links, wenn daraus eine fertige Empfehlung werden soll.",
     labels: {type:"Art", distance:"Entfernung", idealFor:"Ideal für", bestTime:"Beste Zeit", recommendation:"Empfehlung", occupancy:"Auslastung", kids:"Kinder", wind:"Wind", whatToOrder:"Was bestellen", duration:"Dauer", difficulty:"Schwierigkeit", bestHour:"Beste Uhrzeit", see:"Was sehen", recommendedTime:"Empfohlene Zeit", suggestedPlan:"Planvorschlag", contact:"Kontakt", address:"Adresse"}
   },
@@ -199,7 +198,7 @@ const ui = {
     heroImage: "Terrasse imaginée face à la mer à Barbate", brandSmall: "Barbate au bord de la mer",
     favoriteAria: name => `Enregistrer ${name} dans les favoris`, maps: "Ouvrir dans Google Maps", call: "Appeler/réserver", callShort: "Appeler", openMap: "Ouvrir la carte", copyAddress: "Copier l’adresse",
     placeholderCopied: "Placeholder copié pour modification", addressCopied: "Adresse copiée", copyError: "Copie automatique impossible",
-    all: "tous", localTip: "Conseil local", why: "Pourquoi ça marche", contactEditable: "Contact modifiable", whatsApp: "Contacter par WhatsApp", backTop: "Retour en haut",
+    all: "tous", localTip: "Conseil local", why: "Pourquoi ça marche", contactEditable: "Contact modifiable", backTop: "Retour en haut",
     specialTerrace: "Un plan très lié à la terrasse et au rythme du logement.", specialDefault: "Ajoutez horaires, réservations ou liens pour en faire une recommandation complète.",
     labels: {type:"Type", distance:"Distance", idealFor:"Idéal pour", bestTime:"Meilleur moment", recommendation:"Recommandation", occupancy:"Fréquentation", kids:"Enfants", wind:"Vent", whatToOrder:"Que commander", duration:"Durée", difficulty:"Difficulté", bestHour:"Meilleure heure", see:"À voir", recommendedTime:"Temps conseillé", suggestedPlan:"Plan suggéré", contact:"Contact", address:"Adresse"}
   }
@@ -317,7 +316,6 @@ function applyPageTranslation() {
   $(".hero-bg").setAttribute("aria-label", pack.heroImage);
   $(".brand small").textContent = pack.brandSmall;
   $("#siteSearch").placeholder = currentLanguage === "es" ? "Ej. atún, sin coche, atardecer, niños..." : currentLanguage === "en" ? "E.g. tuna, no car, sunset, children..." : currentLanguage === "de" ? "Z. B. Thunfisch, ohne Auto, Sonnenuntergang, Kinder..." : "Ex. thon, sans voiture, coucher de soleil, enfants...";
-  $("#whatsappButton").setAttribute("aria-label", pack.whatsApp);
   $("#backToTop").setAttribute("aria-label", pack.backTop);
   $$(".language-switcher button").forEach(button => button.setAttribute("aria-pressed", String(button.dataset.lang === currentLanguage)));
   Object.entries(staticTranslations[currentLanguage] || {}).forEach(([selector, value]) => {
@@ -357,7 +355,6 @@ function renderStaticContent() {
   $("#hostTips").innerHTML = hostTips.map(tip => `<div class="tip">${tip}</div>`).join("");
   $("#windLink").href = placeholderHref(apartmentInfo.windUrl);
   $("#footerContact").textContent = `${u("contactEditable")}: ${t(apartmentInfo.hostContact)}`;
-  $("#whatsappButton").href = placeholderHref(apartmentInfo.whatsappUrl);
 }
 
 function renderPlans(filter = "todos", query = "") {
